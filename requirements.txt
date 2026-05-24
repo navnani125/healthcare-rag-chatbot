@@ -1,0 +1,26 @@
+# Healthcare RAG Chatbot — dependencies
+# Install: pip install -r requirements.txt
+
+# Core RAG
+langchain==0.2.16
+langchain-community==0.2.16
+
+# Vector database (local, no API key)
+chromadb==0.5.3
+
+# Embeddings (free, runs locally)
+sentence-transformers==3.0.1
+
+# LLM (free Groq API — get key at https://console.groq.com)
+groq==0.9.0
+
+# Data loading
+datasets==2.20.0       # PubMedQA from HuggingFace
+requests==2.32.3       # MedQuAD from GitHub
+
+# UI
+streamlit==1.37.1
+
+# Utilities
+tqdm==4.66.4
+python-dotenv==1.0.1   # for loading .env file with API keys

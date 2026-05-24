@@ -1,0 +1,21 @@
+# Environment
+.env
+*.env
+
+# Data (too large for git)
+data/chroma_db/
+data/chunks.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
