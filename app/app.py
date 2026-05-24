@@ -58,16 +58,15 @@ st.markdown("""
 # ── Session state ─────────────────────────────────────────────────────────────
 if "pipeline" not in st.session_state:
     with st.spinner("Loading medical knowledge base..."):
-        import os
         chroma_path = Path(__file__).parent.parent / "data" / "chroma_db"
         if not chroma_path.exists():
             st.info("⏳ First run: building knowledge base... (takes ~2 mins)")
-            from ingest import load_and_chunk_data
+            from ingest import run_ingestion
             from embeddings import build_vector_store
-            load_and_chunk_data()
+            run_ingestion()
             build_vector_store()
         st.session_state.pipeline = HealthcareRAGPipeline(top_k=5)
-        
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
