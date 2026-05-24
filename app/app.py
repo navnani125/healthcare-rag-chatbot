@@ -62,9 +62,9 @@ if "pipeline" not in st.session_state:
         if not chroma_path.exists():
             st.info("⏳ First run: building knowledge base... (takes ~2 mins)")
             from ingest import run_ingestion
-            from embeddings import build_vector_store
+            from embeddings import build_from_cache
             run_ingestion()
-            build_vector_store()
+            build_from_cache()
         st.session_state.pipeline = HealthcareRAGPipeline(top_k=5)
 
 if "messages" not in st.session_state:
