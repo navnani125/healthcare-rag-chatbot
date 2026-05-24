@@ -13,6 +13,7 @@ sentence-transformers==2.2.2
 
 # LLM (free Groq API — get key at https://console.groq.com)
 groq==1.0.0
+huggingface_hub==0.23.4
 
 # Data loading
 datasets==2.20.0       # PubMedQA from HuggingFace
