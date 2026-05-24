@@ -35,12 +35,15 @@ class MedicalRetriever:
 
         count = self.col.count()
         if count == 0:
-            raise RuntimeError(
-                "Vector store is empty. Run the following first:\n"
-                "  python src/ingest.py\n"
-                "  python src/embeddings.py"
-            )
-        print(f"Retriever ready — {count} vectors loaded.")
+            print("Vector store empty — running ingestion now...")
+            from ingest import load_and_chunk_data
+            from embeddings import build_vector_store
+            load_and_chunk_data()
+            build_vector_store()
+            self.col = get_or_create_collection(self.client)
+            print(f"Ingestion complete — {self.col.count()} vectors loaded.")
+        else:
+            print(f"Retriever ready — {count} vectors loaded.") 
 
     def retrieve(self, query: str, top_k: Optional[int] = None) -> list:
         """
