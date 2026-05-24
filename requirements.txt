@@ -9,7 +9,7 @@ langchain-community==0.2.16
 chromadb==0.5.3
 
 # Embeddings (free, runs locally)
-sentence-transformers==3.0.1
+sentence-transformers==2.7.0
 
 # LLM (free Groq API — get key at https://console.groq.com)
 groq==1.0.0
@@ -24,3 +24,4 @@ streamlit==1.37.1
 # Utilities
 tqdm==4.66.4
 python-dotenv==1.0.1   # for loading .env file with API keys
+Pillow==10.3.0
