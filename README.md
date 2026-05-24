@@ -16,8 +16,7 @@
 ---
 
 ## 🚀 Live Demo
-
-👉 **[Try it on HuggingFace Spaces](https://huggingface.co/spaces/YOUR_USERNAME/healthcare-rag-chatbot)**
+👉 [Try it here](https://healthcare-rag-chatbot-3msfh2oewejmyhk3ntbnum.streamlit.app/)
 
 ---
 
